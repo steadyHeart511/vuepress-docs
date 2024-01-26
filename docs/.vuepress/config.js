@@ -1,4 +1,27 @@
 module.exports = {
+
+    //  基础路径，部署到GitHub Pages就需要设置这个和仓库名一致
+    base: '/vuepress-docs/',
+    //  设置网站标题
+    title: '学习笔记',
+    description: 'Java和Vue的学习笔记',
+    //  添加信息会被注入到当前页面的 HTML <head> 中
+    head: [
+        //  作者信息
+        ['meta', { name: 'author', content: 'steadyheart' }],
+        //  关键词
+        ['meta', { name: 'keywords', content: 'java、vue' }],
+        //  favicon
+        ['link', { rel: 'icon', href: '/assets/img/logo.jpg' }]
+    ],
+    plugins: [['@vuepress/last-updated',{
+        transformer: (timestamp, lang) => {
+          // 不要忘了安装 moment
+          const moment = require('moment')
+          moment.locale('zh-cn')
+          return moment(timestamp).format('LLLL')
+        }
+      }]],
     themeConfig: {
         // logo图标
         logo: '/assets/img/logo.jpg',
@@ -74,9 +97,12 @@ module.exports = {
                 ['Vue2.md','Vue2'],
                 ['Vue3.md','Vue3']
             ]
-        }
+        },
         
         // 根据标题链接自动生成，但是只会生成h1、h2、h3
         // sidebar: 'auto'
+
+        //  显示文本的更新时间,这个时间是基于git的提交时间
+        lastUpdated: 'Last Updated'
     }
   }
