@@ -21,7 +21,20 @@ module.exports = {
           moment.locale('zh-cn')
           return moment(timestamp).format('LLLL')
         }
-      }]],
+    }], ['@vssue/vuepress-plugin-vssue', {
+        //  使用中文，默认为vuePress的设置的语言，vuePress默认为英文
+        locale: 'zh-cn',
+        autoCreateIssue:true,
+        // 设置 `platform` 而不是 `api`
+        platform: 'github-v4',
+  
+        // 其他的 Vssue 配置
+        owner: 'steadyHeart511',
+        repo: 'vuepress-docs',
+        clientId: '329be0f04fffe3ff0099',
+        clientSecret: '2ec708cdbf95acab43de769d2bc5f2376f3692e1',
+        }]
+    ],
     themeConfig: {
         // logo图标
         logo: '/assets/img/logo.jpg',
