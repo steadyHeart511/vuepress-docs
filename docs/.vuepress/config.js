@@ -24,6 +24,7 @@ module.exports = {
     }], ['@vssue/vuepress-plugin-vssue', {
         //  使用中文，默认为vuePress的设置的语言，vuePress默认为英文
         locale: 'zh-cn',
+        // 自动创建issue，就不用用户手动创建了
         autoCreateIssue:true,
         // 设置 `platform` 而不是 `api`
         platform: 'github-v4',
@@ -33,7 +34,8 @@ module.exports = {
         repo: 'vuepress-docs',
         clientId: '329be0f04fffe3ff0099',
         clientSecret: '2ec708cdbf95acab43de769d2bc5f2376f3692e1',
-        }]
+        }],
+        ['@vuepress/back-to-top']
     ],
     themeConfig: {
         // logo图标
@@ -43,6 +45,7 @@ module.exports = {
         //  导航栏
         nav: [
             { text: '首页', link: '/' },
+            { text: '劝学', link: '/study/劝学.md' },
             {
                 text: 'Java',
                 // 下拉列表
