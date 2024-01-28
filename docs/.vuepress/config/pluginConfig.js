@@ -1,3 +1,4 @@
+const secret = require('./secret')
 // 插件配置
 module.exports = [['@vuepress/last-updated', {
     transformer: (timestamp, lang) => {
@@ -17,8 +18,9 @@ module.exports = [['@vuepress/last-updated', {
     // 其他的 Vssue 配置
     owner: 'steadyHeart511',
     repo: 'vuepress-docs',
-    clientId: '329be0f04fffe3ff0099',
-    clientSecret: '2ec708cdbf95acab43de769d2bc5f2376f3692e1',
+    // 脱敏
+    clientId: secret.clientId,
+    clientSecret: secret.clientSecret,
     }],
     ['@vuepress/back-to-top']
 ]
