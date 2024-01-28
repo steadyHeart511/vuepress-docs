@@ -1,7 +1,7 @@
 //  导航栏配置
 module.exports = [
     { text: '首页', link: '/' },
-    { text: '劝学', link: '/study/劝学.md' },
+    { text: '劝学', link: '/study/encourageLearning.md' },
     {
         text: 'Java',
         // 下拉列表
