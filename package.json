@@ -6,7 +6,8 @@
   "scripts": {
     "docs:dev": "vuepress dev docs --temp .temp",
     "docs:build": "set NODE_OPTIONS=--openssl-legacy-provider & vuepress build docs",
-    "deploy": "bash deploy.sh"
+    "deploy": "bash deploy.sh",
+    "cname" : "bash cname.sh"
   },
   "keywords": [],
   "author": "",
