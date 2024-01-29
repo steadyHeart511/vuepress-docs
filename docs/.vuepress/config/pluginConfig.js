@@ -22,5 +22,12 @@ module.exports = [['@vuepress/last-updated', {
     clientId: secret.clientId,
     clientSecret: secret.clientSecret,
     }],
-    ['@vuepress/back-to-top']
+  ['@vuepress/back-to-top'],
+  ['@vuepress/medium-zoom', {
+    // 表示class为zoom-custom-imgs的图片才会有缩放效果
+    selector: 'img.zoom-custom-imgs',
+    options: {
+      margin: 16
+    }
+  }]
 ]
